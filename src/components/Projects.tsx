@@ -60,8 +60,9 @@ const PROJECTS: ProjectData[] = [
   },
 ];
 
-function ProjectCard({ project }: { project: ProjectData }) {
+function ProjectCard({ project, index }: { project: ProjectData; index: number }) {
   const [open, setOpen] = useState(false);
+  const detailsId = `project-details-${index}`;
   return (
     <article className="project-card">
       <div className="project-meta">
@@ -69,7 +70,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
         <div className="project-duration">{project.duration}</div>
       </div>
       <h3>{project.title}</h3>
-      <ul className="bullet-list">
+      <ul className="bullet-list" id={detailsId}>
         {project.bullets.map((b) => (
           <li key={b}>{b}</li>
         ))}
@@ -85,6 +86,8 @@ function ProjectCard({ project }: { project: ProjectData }) {
       <button
         type="button"
         className="toggle-btn"
+        aria-expanded={open}
+        aria-controls={detailsId}
         onClick={() => setOpen((o) => !o)}
       >
         {open ? "— Show less" : "+ Full detail"}
@@ -101,8 +104,8 @@ export default function Projects() {
         <p className="section-sub">Three engagements at PALO IT, 2023 — present.</p>
       </div>
       <div>
-        {PROJECTS.map((p) => (
-          <ProjectCard project={p} key={p.label} />
+        {PROJECTS.map((p, i) => (
+          <ProjectCard project={p} index={i} key={p.label} />
         ))}
       </div>
     </section>
