@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purinat Sanbundit — Full-Stack Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f3f2f2; color: #201e1d; font-family: "Archivo", system-ui, sans-serif; font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  *, *::before, *::after { box-sizing: border-box; }
+  a { color: #ae1800; text-underline-offset: 3px; }
+  a:hover { color: #ec3013; }
+  ::selection { background: rgba(236,48,19,0.28); }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid #ec3013; outline-offset: 2px; }
+  li::before { content: ""; position: absolute; left: 0; top: 11px; width: 12px; height: 2px; background: #ec3013; }
+  @keyframes dcRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      [data-motion="on"] [data-reveal]:not(#top) { animation: dcRise linear both; animation-timeline: view(); animation-range: entry 0% cover 20%; }
+    }
+  }
+  @media (max-width: 900px) {
+    .col2 { grid-template-columns: 1fr !important; }
+    .col4 { grid-template-columns: 1fr 1fr !important; }
+    .sec { grid-template-columns: 1fr !important; }
+    .navlinks { display: none !important; }
+  }
+</style>
+</helmet>
+
+<div data-motion="{{ motionAttr }}" style="max-width:1280px;margin:0 auto;padding:0 40px">
+
+  <header style="position:sticky;top:0;z-index:50;background:#f3f2f2;border-bottom:2px solid rgba(32,30,29,0.4);display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;margin-bottom:0">
+    <a href="#top" style="font-weight:800;font-size:14px;letter-spacing:0.12em;text-transform:uppercase;color:#201e1d;text-decoration:none">Purinat Sanbundit</a>
+    <nav class="navlinks" style="display:flex;align-items:center;gap:28px">
+      <a href="#projects" style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none">Projects</a>
+      <a href="#experience" style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none">Experience</a>
+      <a href="#skills" style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none">Skills</a>
+      <a href="#contact" style="font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none">Contact</a>
+    </nav>
+    <a href="uploads/Purinat_Sanbundit_CV_2026.pdf" download="" style="display:inline-flex;align-items:center;justify-content:flex-start;background:#ec3013;color:#f3f2f2;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:10px 16px;border:1px solid #ec3013" style-hover="background:#dd2b0f;border-color:#dd2b0f">Download CV</a>
+  </header>
+
+  <section id="top" data-reveal="" class="col2" style="display:grid;grid-template-columns:1.5fr 1fr;gap:56px;padding:72px 0 56px;align-items:start">
+    <div>
+      <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
+        <div style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(32,30,29,0.4);padding:6px 12px;margin-bottom:28px">
+          <span style="width:8px;height:8px;background:#ec3013;display:block"></span>
+          <span style="font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Open to senior roles — Bangkok / Remote</span>
+        </div>
+      </sc-if>
+      <h1 style="font-size:clamp(52px,7.4vw,104px);font-weight:800;line-height:0.92;letter-spacing:-0.035em;text-transform:uppercase;margin:0 0 20px">Purinat<br>Sanbundit</h1>
+      <p style="font-size:22px;font-weight:600;line-height:1.3;margin:0 0 24px;max-width:26ch">Full-Stack Software Engineer — mobile, web and event-driven systems.</p>
+      <p style="font-size:17px;line-height:1.6;margin:0 0 28px;max-width:56ch;text-wrap:pretty">Five-plus years shipping production software across banking, international web platforms and large-scale B2B MarTech. I work end to end: Flutter and Nuxt 3 on the front, reactive Kotlin services and Kafka on the back, CI/CD and clean architecture holding it together.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <a href="mailto:purinat.san@gmail.com" style="display:inline-flex;align-items:center;justify-content:flex-start;background:#ec3013;color:#f3f2f2;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:12px 18px;border:1px solid #ec3013" style-hover="background:#dd2b0f;border-color:#dd2b0f">Get in touch</a>
+        <a href="#projects" style="display:inline-flex;align-items:center;justify-content:flex-start;color:#201e1d;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:12px 18px;border:1px solid rgba(32,30,29,0.4)" style-hover="background:rgba(32,30,29,0.07)">See selected work</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <div style="position:relative;width:100%;aspect-ratio:4/5;border:2px solid rgba(32,30,29,0.4);filter:grayscale(1) contrast(1.08)">
+        <image-slot id="portrait" shape="rect" fit="cover" placeholder="Drop a portrait photo"></image-slot>
+      </div>
+      <figcaption style="font-size:11px;margin-top:8px;color:rgba(32,30,29,0.55);font-family:ui-monospace,SFMono-Regular,Menlo,monospace">Bangkok, Thailand · +66 97-227-1804 · purinat.san@gmail.com</figcaption>
+    </figure>
+  </section>
+
+  <section data-reveal="" class="col4" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid rgba(32,30,29,0.4);border-bottom:2px solid rgba(32,30,29,0.4)">
+    <div style="padding:28px 24px 28px 0">
+      <div style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1">5+</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55);margin-top:6px">Years in production</div>
+    </div>
+    <div style="padding:28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+      <div style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1">50K+</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55);margin-top:6px">Daily transactions handled</div>
+    </div>
+    <div style="padding:28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+      <div style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1">50%</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55);margin-top:6px">Faster feature delivery</div>
+    </div>
+    <div style="padding:28px 0 28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+      <div style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1">5</div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55);margin-top:6px">SEA regions served</div>
+    </div>
+  </section>
+
+  <section id="projects" data-reveal="" class="sec" style="display:grid;grid-template-columns:220px 1fr;gap:48px;padding:72px 0 0">
+    <div>
+      <h2 style="font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 10px">Selected work</h2>
+      <p style="font-size:14px;color:rgba(32,30,29,0.55);margin:0">Three engagements at PALO IT, 2023 — present.</p>
+    </div>
+    <div>
+
+      <article style="border-top:2px solid rgba(32,30,29,0.4);padding:32px 0">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#ae1800">Enterprise B2B MarTech Platform</div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Major Thai enterprise group · Ongoing</div>
+        </div>
+        <h3 style="font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;margin:0 0 14px;max-width:22ch">Distributed multi-domain system at 1K–50K+ daily transactions</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:70ch">
+          <li style="position:relative;padding-left:24px">Led development of a distributed system spanning Gamification, Commerce and Messaging domains, improving scalability and domain decoupling.</li>
+          <li style="position:relative;padding-left:24px">Built and maintained the frontend and BFF layer with Nuxt 3, improving modularity and cutting feature delivery time by 50%.</li>
+          <li style="position:relative;padding-left:24px">Implemented cross-domain integration over REST and Kafka event-driven messaging for asynchronous data flow between services.</li>
+          <sc-if value="{{ open0 }}" hint-placeholder-val="{{ false }}">
+            <li style="position:relative;padding-left:24px">Contributed reactive backend services in Spring WebFlux (Kotlin) following Clean Architecture, supporting non-blocking, scalable processing — including campaign features running 1,000–100,000 concurrent participants.</li>
+            <li style="position:relative;padding-left:24px">Shipped features across Gamification (missions, ballots, challenges) and Commerce (campaigns, orders, packages), supporting complex large-scale workflows.</li>
+            <li style="position:relative;padding-left:24px">Designed domain-specific data models and flows on MongoDB and PostgreSQL, optimising read/write performance by 25% across services.</li>
+            <li style="position:relative;padding-left:24px">Reduced production incidents by 10% through improved error handling, retry mechanisms and async processing strategies.</li>
+          </sc-if>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Nuxt 3</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Kotlin · Spring WebFlux</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Kafka</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">MongoDB</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">PostgreSQL</span>
+        </div>
+        <button type="button" onClick="{{ toggle0 }}" style="margin-top:18px;background:transparent;border:0;cursor:pointer;font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#ae1800;padding:4px 0" style-hover="color:#ec3013">{{ label0 }}</button>
+      </article>
+
+      <article style="border-top:2px solid rgba(32,30,29,0.4);padding:32px 0">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#ae1800">Flutter Web One-Stop Service Platform</div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Singapore-based client · 1 yr 3 mo</div>
+        </div>
+        <h3 style="font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;margin:0 0 14px;max-width:22ch">One enterprise platform, five SEA regions</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:70ch">
+          <li style="position:relative;padding-left:24px">Developed an enterprise Flutter Web platform serving a one-stop service system used across multiple SEA regions.</li>
+          <li style="position:relative;padding-left:24px">Built the BFF layer with Nest.js to aggregate and streamline backend communication for frontend consumption.</li>
+          <li style="position:relative;padding-left:24px">Drove cross-team alignment across 5 regions — clarifying requirements and keeping delivery on track.</li>
+          <sc-if value="{{ open1 }}" hint-placeholder-val="{{ false }}">
+            <li style="position:relative;padding-left:24px">Collaborated with distributed teams across Asia-Pacific and Europe on cross-regional feature delivery.</li>
+            <li style="position:relative;padding-left:24px">Helped shape project structure and architecture, introducing clearer module boundaries for better scalability and team collaboration.</li>
+          </sc-if>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Flutter Web</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Nest.js</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">BFF architecture</span>
+        </div>
+        <button type="button" onClick="{{ toggle1 }}" style="margin-top:18px;background:transparent;border:0;cursor:pointer;font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#ae1800;padding:4px 0" style-hover="color:#ec3013">{{ label1 }}</button>
+      </article>
+
+      <article style="border-top:2px solid rgba(32,30,29,0.4);border-bottom:2px solid rgba(32,30,29,0.4);padding:32px 0">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#ae1800">Mobile Banking Revamp</div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Thai banking client · 1 yr</div>
+        </div>
+        <h3 style="font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;margin:0 0 14px;max-width:22ch">Legacy banking app rebuilt cross-platform in Flutter</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:70ch">
+          <li style="position:relative;padding-left:24px">Revamped a legacy mobile banking application with Flutter, unifying iOS and Android and reducing platform fragmentation.</li>
+          <li style="position:relative;padding-left:24px">Drove the re-architecture, improving scalability and maintainability and enabling faster team delivery.</li>
+          <li style="position:relative;padding-left:24px">Implemented CI/CD pipelines with Docker and Jenkins, cutting manual deployment effort and improving release consistency.</li>
+          <sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}">
+            <li style="position:relative;padding-left:24px">Automated end-to-end testing with a Given–When–Then approach, improving test reliability and regression coverage.</li>
+            <li style="position:relative;padding-left:24px">Practised trunk-based development inside an Agile (Scrum) workflow to support continuous integration and delivery.</li>
+            <li style="position:relative;padding-left:24px">Integrated Firebase services and secure backend APIs for real-time features and user data handling.</li>
+          </sc-if>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Flutter</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Docker · Jenkins</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">Firebase</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(32,30,29,0.4);padding:4px 9px">E2E automation</span>
+        </div>
+        <button type="button" onClick="{{ toggle2 }}" style="margin-top:18px;background:transparent;border:0;cursor:pointer;font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:#ae1800;padding:4px 0" style-hover="color:#ec3013">{{ label2 }}</button>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience" data-reveal="" class="sec" style="display:grid;grid-template-columns:220px 1fr;gap:48px;padding:72px 0 0">
+    <div>
+      <h2 style="font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 10px">Experience</h2>
+      <p style="font-size:14px;color:rgba(32,30,29,0.55);margin:0">2021 — present.</p>
+    </div>
+    <div>
+      <div style="border-top:2px solid rgba(32,30,29,0.4);padding:32px 0;display:grid;grid-template-columns:1fr;gap:14px">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between">
+          <h3 style="font-size:26px;font-weight:800;letter-spacing:-0.02em;margin:0">PALO IT</h3>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Sep 2023 — Present</div>
+        </div>
+        <div style="font-size:17px;font-weight:600">Software Engineer · Full-Stack Developer · IT Consultant</div>
+        <p style="margin:0;max-width:70ch;color:rgba(32,30,29,0.75)">Delivering enterprise digital solutions across banking, international web platforms and large-scale B2B MarTech systems — three client engagements to date, detailed above.</p>
+      </div>
+      <div style="border-top:2px solid rgba(32,30,29,0.4);border-bottom:2px solid rgba(32,30,29,0.4);padding:32px 0;display:grid;grid-template-columns:1fr;gap:14px">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between">
+          <h3 style="font-size:26px;font-weight:800;letter-spacing:-0.02em;margin:0">Dek-D Interactive Co., Ltd.</h3>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Mar 2021 — Aug 2023</div>
+        </div>
+        <div style="font-size:17px;font-weight:600">Front-end Developer (full-time, from internship)</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:70ch">
+          <li style="position:relative;padding-left:24px">Developed and maintained a high-traffic web platform with Nuxt.js, React and Svelte, supporting large-scale user interaction.</li>
+          <li style="position:relative;padding-left:24px">Implemented performance-optimised UI and WebView integration for the mobile app, improving rendering performance.</li>
+          <li style="position:relative;padding-left:24px">Built responsive admin interfaces with React, Next.js and GraphQL for internal tooling and content management.</li>
+          <li style="position:relative;padding-left:24px">Developed reusable components and internal tools that improved development efficiency across teams.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" data-reveal="" class="sec" style="display:grid;grid-template-columns:220px 1fr;gap:48px;padding:72px 0 0">
+    <div>
+      <h2 style="font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 10px">Stack</h2>
+      <p style="font-size:14px;color:rgba(32,30,29,0.55);margin:0">What I reach for, day to day.</p>
+    </div>
+    <div class="col4" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid rgba(32,30,29,0.4);border-bottom:2px solid rgba(32,30,29,0.4)">
+      <div style="padding:28px 24px 28px 0">
+        <h4 style="font-size:13px;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;margin:0 0 14px;color:#ae1800">Frontend &amp; Mobile</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:15px">
+          <li style="position:relative;padding-left:24px">Flutter — iOS, Android, Web</li>
+          <li style="position:relative;padding-left:24px">Nuxt 3 / Vue.js</li>
+          <li style="position:relative;padding-left:24px">React / Next.js</li>
+          <li style="position:relative;padding-left:24px">Svelte</li>
+        </ul>
+      </div>
+      <div style="padding:28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+        <h4 style="font-size:13px;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;margin:0 0 14px;color:#ae1800">Backend &amp; Architecture</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:15px">
+          <li style="position:relative;padding-left:24px">Spring WebFlux (Kotlin)</li>
+          <li style="position:relative;padding-left:24px">Nest.js / Express.js</li>
+          <li style="position:relative;padding-left:24px">Gin (Go)</li>
+          <li style="position:relative;padding-left:24px">REST APIs, Clean Architecture</li>
+        </ul>
+      </div>
+      <div style="padding:28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+        <h4 style="font-size:13px;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;margin:0 0 14px;color:#ae1800">Data &amp; Messaging</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:15px">
+          <li style="position:relative;padding-left:24px">MongoDB</li>
+          <li style="position:relative;padding-left:24px">PostgreSQL</li>
+          <li style="position:relative;padding-left:24px">Kafka</li>
+          <li style="position:relative;padding-left:24px">Redis</li>
+        </ul>
+      </div>
+      <div style="padding:28px 0 28px 24px;border-left:2px solid rgba(32,30,29,0.4)">
+        <h4 style="font-size:13px;font-weight:800;letter-spacing:0.09em;text-transform:uppercase;margin:0 0 14px;color:#ae1800">Tools &amp; Cloud</h4>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:15px">
+          <li style="position:relative;padding-left:24px">Docker, Git</li>
+          <li style="position:relative;padding-left:24px">Jenkins, GitHub Actions</li>
+          <li style="position:relative;padding-left:24px">Google Cloud, AWS</li>
+          <li style="position:relative;padding-left:24px">Firebase, Netlify</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal="" class="sec" style="display:grid;grid-template-columns:220px 1fr;gap:48px;padding:72px 0 0">
+    <div>
+      <h2 style="font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 10px">Education &amp; Languages</h2>
+    </div>
+    <div class="col2" style="display:grid;grid-template-columns:1.3fr 1fr;gap:48px;border-top:2px solid rgba(32,30,29,0.4);border-bottom:2px solid rgba(32,30,29,0.4);padding:32px 0">
+      <div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:10px">
+          <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Mahidol University</h3>
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(32,30,29,0.55)">2018 — 2021</div>
+        </div>
+        <p style="margin:0 0 6px;font-weight:600">BSc, Information and Communication Technology (MUICT)</p>
+        <p style="margin:0 0 20px;color:rgba(32,30,29,0.75)">Computer Software Engineering track. First Class Honours, GPA 3.51.</p>
+        <div style="border-left:2px solid #ec3013;padding-left:16px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:#ae1800;margin-bottom:6px">Final project · AiRadar, 2021</div>
+          <p style="margin:0;color:rgba(32,30,29,0.75);max-width:52ch">Full-stack air quality monitoring platform — data ingestion and visualisation on Next.js, Express.js and MongoDB, IoT device integration, real-time tracking and notifications, deployed on DigitalOcean.</p>
+        </div>
+      </div>
+      <div>
+        <ul style="list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:14px">
+          <li style="position:relative;padding-left:24px"><strong style="font-weight:600">Thai</strong> — native speaker</li>
+          <li style="position:relative;padding-left:24px"><strong style="font-weight:600">English</strong> — professional working proficiency; TOEIC 745 (2020)</li>
+        </ul>
+        <p style="margin:0;color:rgba(32,30,29,0.75);max-width:40ch">Comfortable working in English across international teams — day-to-day collaboration with colleagues in Asia-Pacific and Europe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-reveal="" style="margin:80px 0 0;background:#ec3013;color:#f3f2f2;padding:64px 48px">
+    <h2 style="font-size:clamp(36px,5.2vw,68px);font-weight:800;line-height:0.98;letter-spacing:-0.03em;text-transform:uppercase;margin:0 0 24px;max-width:18ch">Let's build something that scales</h2>
+    <p style="font-size:19px;line-height:1.5;margin:0 0 36px;max-width:52ch">Based in Bangkok, working with teams anywhere. Happy to talk through any of the work above in detail.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+      <a href="mailto:purinat.san@gmail.com" style="display:inline-flex;align-items:center;justify-content:flex-start;background:#f3f2f2;color:#201e1d;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border:1px solid #f3f2f2" style-hover="background:#ffe0d9;border-color:#ffe0d9">purinat.san@gmail.com</a>
+      <a href="tel:+66972271804" style="display:inline-flex;align-items:center;justify-content:flex-start;color:#f3f2f2;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border:1px solid rgba(243,242,242,0.6)" style-hover="background:rgba(243,242,242,0.14)">+66 97-227-1804</a>
+      <a href="uploads/Purinat_Sanbundit_CV_2026.pdf" download="" style="display:inline-flex;align-items:center;justify-content:flex-start;color:#f3f2f2;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;padding:14px 20px;border:1px solid rgba(243,242,242,0.6)" style-hover="background:rgba(243,242,242,0.14)">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <footer style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding:28px 0 48px">
+    <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(32,30,29,0.55)">Purinat Sanbundit · Bangkok, Thailand</div>
+    <div style="display:flex;gap:20px">
+      <a href="#" style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none;border-bottom:2px solid rgba(32,30,29,0.4)" style-hover="border-color:#ec3013">LinkedIn</a>
+      <a href="#" style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none;border-bottom:2px solid rgba(32,30,29,0.4)" style-hover="border-color:#ec3013">GitHub</a>
+      <a href="mailto:purinat.san@gmail.com" style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#201e1d;text-decoration:none;border-bottom:2px solid rgba(32,30,29,0.4)" style-hover="border-color:#ec3013">Email</a>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;expandProjects&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Scroll reveals&quot;,&quot;None&quot;],&quot;default&quot;:&quot;Scroll reveals&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const all = props.expandProjects ?? false;
+    this.state = { open: [all, all, all] };
+    this.toggle0 = () => this.toggle(0);
+    this.toggle1 = () => this.toggle(1);
+    this.toggle2 = () => this.toggle(2);
+  }
+
+  toggle(i) {
+    this.setState((s) => {
+      const open = s.open.slice();
+      open[i] = !open[i];
+      return { open };
+    });
+  }
+
+  renderVals() {
+    const o = this.state.open;
+    const label = (i) => (o[i] ? "— Show less" : "+ Full detail");
+    return {
+      motionAttr: (this.props.motion ?? "Scroll reveals") === "None" ? "off" : "on",
+      showAvailability: this.props.showAvailability ?? false,
+      open0: o[0], open1: o[1], open2: o[2],
+      label0: label(0), label1: label(1), label2: label(2),
+      toggle0: this.toggle0,
+      toggle1: this.toggle1,
+      toggle2: this.toggle2
+    };
+  }
+}
+</script>
+</body>
+</html>
