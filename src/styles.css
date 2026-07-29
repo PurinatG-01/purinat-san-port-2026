@@ -240,6 +240,14 @@ a:hover {
   font-size: 13px;
   text-align: center;
 }
+.portrait-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  filter: grayscale(1) contrast(1.08);
+}
 .portrait-caption {
   font-size: 11px;
   margin-top: 8px;

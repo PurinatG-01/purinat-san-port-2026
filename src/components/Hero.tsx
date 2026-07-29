@@ -30,7 +30,11 @@ export default function Hero() {
         </div>
       </div>
       <figure className="portrait-frame">
-        <div className="portrait-box">Add portrait</div>
+        <img
+          src="/portrait_1.jpeg"
+          alt="Purinat Sanbundit"
+          className="portrait-img"
+        />
         <figcaption className="portrait-caption">
           Bangkok, Thailand · +66 97-227-1804 · purinat.san@gmail.com
         </figcaption>
